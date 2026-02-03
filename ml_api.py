@@ -12,7 +12,7 @@ feature_order = joblib.load("agrosmart_feature_order.pkl")
 app = FastAPI(title="AgroSmart ML API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # your Vite dev server
+    allow_origins=["*"],  # your Vite dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
